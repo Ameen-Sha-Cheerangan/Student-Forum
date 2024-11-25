@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  word-break: break-word;
+  /* Break long words */
+  overflow-wrap: anywhere;
+  /* Break text at any point */
+  white-space: normal;
+  /* Ensure normal wrapping */
+}
+
+@layer utilities {
+  .my-input {
+    @apply border;
+  }
+}

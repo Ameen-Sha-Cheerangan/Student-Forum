@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/NitcLogo.svg" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Knowledge Flow</title>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$']], // Inline math delimiters
+        displayMath: [['$$', '$$']], // Block math delimiters
+      },
+    };
+  </script>
+
+  <!-- MathJax Script -->
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js">
+    </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    // AWS Amplify needs this to work. See https://github.com/aws/aws-sdk-js/issues/3673
+    const isBrowser = () => typeof window !== 'undefined';
+    const isGlobal = () => typeof global !== 'undefined';
+    if (!isGlobal() && isBrowser()) {
+      var global = window;
+    }
+  </script>
+</body>
+
+</html>
